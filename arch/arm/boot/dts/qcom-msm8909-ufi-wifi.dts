@@ -36,6 +36,34 @@
 
 	};
 
+	leds {
+		pinctrl-names = "default";
+		pinctrl-0 = <&msmgpio_leds>;
+
+		compatible = "gpio-leds";
+
+		wifi {
+			label = "blue:wifi";
+			gpios = <&msmgpio 1 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "phy0tx";
+			default-state = "off";
+		};
+
+		led_internet: internet {
+			label = "green:internet";
+			gpios = <&msmgpio 69 GPIO_ACTIVE_HIGH>;
+			default-state = "off";
+		};
+
+		os {
+			label = "red:os";
+			gpios = <&msmgpio 68 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "heartbeat";
+			default-state = "on";
+		};
+
+	};
+
 
 	matrix_keypad {
 		compatible = "gpio-matrix-keypad";
