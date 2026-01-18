@@ -43,6 +43,7 @@
 		};
 	};
 
+	/*
 	backlight: backlight {
 		compatible = "pwm-backlight";
 		pwms = <&pwm 0 100000>;
@@ -69,6 +70,7 @@
 		default-brightness = <250>;
 		enable-gpios = <&tlmm 8 GPIO_ACTIVE_HIGH>;
 	};
+	*/
 };
 
 &pm8909_resin {
@@ -93,6 +95,7 @@
 	status = "okay";
 };
 
+/*
 &mdss_dsi0 {
 	status = "okay";
 	vdd-supply = <&pm8909_l17>;
@@ -126,6 +129,7 @@
 	qcom,dsi-phy-regulator-ldo-mode;
 	vddio-supply = <&pm8909_l6>;
 };
+*/
 
 &pm8909_usbin {
 	status = "okay";
